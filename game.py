@@ -4,6 +4,7 @@ from textwrap import dedent
 
 
 class Scene(object):
+    
     def enter(self):
         print('This scene is not configured yet.')
         print('Subclass it and implement enter().')
@@ -11,6 +12,7 @@ class Scene(object):
 
 
 class Engine(object):
+    
     def __init__(self, scene_map):
         self.scene_map = scene_map
 
@@ -37,6 +39,7 @@ class Death(Scene):
         exit(1)
 
 class CentralCorridor(Scene):
+    
     def enter(self):
         print(dedent('''
             The Gothons of Planet Percal #25 have invaded your ship and
@@ -98,6 +101,7 @@ class CentralCorridor(Scene):
             return 'central_corridor'
 
 class LaserWeaponArmoryScene(Scene):
+    
     def enter(self):
         print(dedent('''
             You do a dive roll into the Weapon Armory, crouch and scan
@@ -141,6 +145,7 @@ class LaserWeaponArmoryScene(Scene):
     
 
 class TheBridgeScene(Scene):
+    
     def enter(self):
         print(dedent('''
             You burst onto the Bridge with the netron destruct bomb
@@ -185,6 +190,7 @@ class TheBridgeScene(Scene):
 
 
 class EscapePod(Scene):
+    
     def enter(self):
         print(dedent('''
             You rush through the ship desperately trying to make it to
@@ -220,3 +226,10 @@ class EscapePod(Scene):
             '''))
 
             return 'finished'
+
+
+class Finished(Scene):
+    
+    def enter(self):
+        print('You made it!')
+        return 'finished'
