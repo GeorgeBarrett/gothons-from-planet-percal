@@ -54,9 +54,9 @@ class CentralCorridor(Scene):
             about to pull a weapon to blast you.
         '''))
 
-        action = input('> ')
+        action = input('[shoot, dodge or tell a joke]> ')
 
-        if action == 'Shoot!':
+        if action == 'shoot':
             print(dedent('''
                 Quick on the draw you yank out your blaster and fire
                 it at the Gothon. His clown costume is flowing and
@@ -70,7 +70,7 @@ class CentralCorridor(Scene):
 
             return 'death'
 
-        elif action == 'Dodge!':
+        elif action == 'dodge':
             print(dedent('''
                 Like a world class boxer you dodge, weave, slip and
                 slide right as the Gothon's blaster cranks a laser
@@ -82,7 +82,7 @@ class CentralCorridor(Scene):
 
             return 'death'
 
-        elif action == 'Tell a joke!':
+        elif action == 'tell a joke':
             print(dedent('''
                 Lucky for you they made you learn Gothon insults in
                 the academy. You tell the one Gothon joke you know:
@@ -156,9 +156,9 @@ class TheBridge(Scene):
             arm and don't want to set it off.
         '''))
 
-        action = input('> ')
+        action = input('[throw the bomb or slowly place the bomb]> ')
 
-        if action == 'Throw the bomb!':
+        if action == 'throw the bomb':
             print(dedent('''
                 In a panic you throw the bomb at the group of Gothons
                 and make a leap for the door. Right as you drop it a
@@ -170,7 +170,7 @@ class TheBridge(Scene):
 
             return 'death'
 
-        elif action == 'Slowly place the bomb':
+        elif action == 'slowly place the bomb':
             print(dedent('''
                 You point your blaster at the bomb under your arm and
                 the Gothons put their hands up and start to sweat.
